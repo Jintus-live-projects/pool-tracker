@@ -4,9 +4,11 @@ import { PlayerDto } from '../../dtos/player.dto';
 export const mapPlayerEntityToPlayerDto = (entity: PlayerEntity): PlayerDto => {
   return {
     id: entity.id,
-    pseudo: entity.pseudo
+    userId: entity.userId,
   };
 };
-export const mapPlayerEntitiesToPlayerDtos = (entities: PlayerEntity[]): PlayerDto[] => {
+export const mapPlayerEntitiesToPlayerDtos = (
+  entities: PlayerEntity[]
+): PlayerDto[] => {
   return entities.map(mapPlayerEntityToPlayerDto);
 };

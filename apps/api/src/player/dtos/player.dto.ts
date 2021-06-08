@@ -1,15 +1,8 @@
-import { IsEmail, IsNotEmpty } from 'class-validator';
-
-class BasePlayerDto {
-  @IsNotEmpty()
-  pseudo: string;
-}
-
-export class PlayerDto extends BasePlayerDto {
+export class PlayerDto {
   id: number;
+  userId: number;
 }
 
-export class CreatePlayerDto extends BasePlayerDto {
-  @IsEmail()
-  email: string;
+export class CreatePlayerDto {
+  userId: number;
 }
